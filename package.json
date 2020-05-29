@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "NestJS Application",
   "author": "Israel Guzman - Angular Mastery ©",
-  "license": "MIT",
+  "license": "GNU General Public License v3.0",
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
