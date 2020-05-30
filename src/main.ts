@@ -9,10 +9,13 @@ import { HttpExceptionFilter } from './filters/http-exception.filter';
 
 const server = Express();
 server.get('/', (req, res) => res.send('Bienvenid@ al workshop de Nx!'));
+server.get('/api', (req, res) => res.send('Bienvenid@ al workshop de Nx!'));
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, new ExpressAdapter(server));
   app.enableCors();
+  const globalPrefix = 'api';
+  app.setGlobalPrefix(globalPrefix);
   app.useGlobalFilters(new HttpExceptionFilter());
   await app.listen(3000);
 }
